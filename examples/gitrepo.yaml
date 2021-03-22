@@ -1,0 +1,17 @@
+iapiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: ngrok
+  namespace: fleet-default
+spec:
+  branch: master
+  insecureSkipTLSVerify: false
+  paths:
+  - /charts/ngrok-operator
+  - /charts/ngrok-operator/charts-crd
+  repo: https://github.com/shpwrck/ngrok-operator
+  targets:
+  - clusterSelector:
+      matchLabels:
+        distro: k3d
+type: fleet.cattle.io.gitrepo
