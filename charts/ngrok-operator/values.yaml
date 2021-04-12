@@ -6,4 +6,4 @@ operator:
   # pullPolicy for operator image
   pullPolicy: "Always"
   # number of replica for deployment
-  replica: 1
+  replica: 3
